@@ -5,7 +5,7 @@ import Image from "next/image";
 const Eventcontainer = ({ data }) => {
   return (
     <div className={styles.card}>
-      <img
+      <Image
         src={data.src}
         width={100}
         height={100}

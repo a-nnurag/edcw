@@ -3,14 +3,15 @@ import React, { useState } from "react";
 import styles from "./Contactuscss.module.css";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
+import Image from "next/image";
 
 async function addDataToFireStore(
-  firstname,
-  lastname,
-  email,
-  phonenumber,
-  subject,
-  message
+  firstname: string,
+  lastname: string,
+  email: string,
+  phonenumber: string,
+  subject: string,
+  message: string
 ) {
   try {
     const docRef = await addDoc(collection(db, "messages"), {
@@ -34,10 +35,10 @@ const Contactus = () => {
   const [lastname, setlastName] = useState("");
   const [email, setEmail] = useState("");
   const [phonenumber, setphoneNumber] = useState("");
-  const [subject, setSubject] = useState();
+  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     const added = await addDataToFireStore(
       firstname,
@@ -52,11 +53,10 @@ const Contactus = () => {
       setlastName("");
       setEmail("");
       setphoneNumber("");
-      setSubject();
+      setSubject("");
       setMessage("");
 
       let radio = document.getElementById("subject");
-      radio.checked = false;
 
       alert("Data added to firestore DB!! ");
     }
@@ -69,7 +69,13 @@ const Contactus = () => {
       </div>
       <div className={styles.lower}>
         <div className={styles.left}>
-          <img src="./contactus/sideimg.png" alt="" className={styles.image} />
+          <Image
+            src="/contactus/sideimg.png"
+            alt=""
+            className={styles.image}
+            height={500}
+            width={500}
+          />
         </div>
         <form className={styles.right} onSubmit={handleSubmit}>
           <div className={styles.formholder}>

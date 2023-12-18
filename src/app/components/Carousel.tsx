@@ -1,5 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
+import Image from "next/image";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -42,22 +44,58 @@ export default function Carousel() {
         }}
       >
         <SwiperSlide className={styles.swiperslide}>
-          <img src="./initative/i1.jpg" alt="" className={styles.img} />
+          <Image
+            src="/initative/i1.jpg"
+            alt=""
+            className={styles.img}
+            height={500}
+            width={500}
+          />
         </SwiperSlide>
         <SwiperSlide className={styles.swiperslide}>
-          <img src="./initative/i2.jpg" alt="" className={styles.img} />
+          <Image
+            src="/initative/i2.jpg"
+            alt=""
+            className={styles.img}
+            height={500}
+            width={500}
+          />
         </SwiperSlide>
         <SwiperSlide className={styles.swiperslide}>
-          <img src="./initative/i4.jpg" alt="" className={styles.img} />
+          <Image
+            src="/initative/i4.jpg"
+            alt=""
+            className={styles.img}
+            height={500}
+            width={500}
+          />
         </SwiperSlide>
         <SwiperSlide className={styles.swiperslide}>
-          <img src="./initative/i5.jpg" alt="" className={styles.img} />
+          <Image
+            src="/initative/i5.jpg"
+            alt=""
+            className={styles.img}
+            height={500}
+            width={500}
+          />
         </SwiperSlide>
         <SwiperSlide className={styles.swiperslide}>
-          <img src="./initative/i6.jpg" alt="" className={styles.img} />
+          <Image
+            src="/initative/i6.jpg"
+            alt=""
+            className={styles.img}
+            height={500}
+            width={500}
+          />
         </SwiperSlide>
         <SwiperSlide className={styles.swiperslide}>
-          <img src="./initative/i7.jpg" alt="" className={styles.img} />
+          <Image
+            src="/initative/i7.jpg"
+            alt=""
+            className={styles.img}
+            height={500}
+            width={500}
+          />
         </SwiperSlide>
       </Swiper>
     </>

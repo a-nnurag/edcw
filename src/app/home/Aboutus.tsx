@@ -1,12 +1,20 @@
 import React from "react";
 import styles from "./Aboutus.module.css";
+import Image from "next/image";
+import { FilterListOffTwoTone } from "@mui/icons-material";
 
 const AboutUs = () => {
   return (
     <div id="aboutus" className={styles.aboutus}>
       <h1 className={styles.header}>About Us</h1>
       <div className={styles.body}>
-        <img className={styles.image} src="./aboutus/aboutus.png" alt="" />
+        <Image
+          className={styles.image}
+          src="/aboutus/aboutus.png"
+          alt=""
+          height={500}
+          width={500}
+        />
         <div className={styles.content}>
           <div className={styles.topic}>What is EDC?</div>
           <p className={styles.para}>

@@ -2,6 +2,7 @@
 import react, { useState } from "react";
 import styles from "./Gallerycss.module.css";
 import data from "../schema/gallery";
+import Image from "next/image";
 
 const Gallery = () => {
   // const [model, setModel] = useState(false);
@@ -27,7 +28,13 @@ const Gallery = () => {
               key={index}
               // onClick={() => getImg(item.src)}
             >
-              <img src={item.src} className={styles.image} alt="" />
+              <Image
+                src={item.src}
+                className={styles.image}
+                alt=""
+                height={500}
+                width={500}
+              />
             </div>
           );
         })}
