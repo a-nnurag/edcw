@@ -2,7 +2,12 @@ import React from "react";
 import styles from "./Eventcontainer.module.css";
 import Image from "next/image";
 
-const Eventcontainer = ({ data }) => {
+const Eventcontainer = (data: {
+  id: number;
+  src: string;
+  title: string;
+  descritption: string;
+}) => {
   return (
     <div className={styles.card}>
       <Image
@@ -14,7 +19,7 @@ const Eventcontainer = ({ data }) => {
       />
       <div className={styles.card__inner}>
         <h2 className={styles.card__inner_h2}>{data.title}</h2>
-        <p className={styles.card__inner_p}>{data.descritpion}</p>
+        <p className={styles.card__inner_p}>{data.descritption}</p>
       </div>
     </div>
   );

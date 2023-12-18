@@ -15,7 +15,7 @@ import SvgIcon from "@mui/joy/SvgIcon";
 import data from "../schema/gallery";
 
 export default function Biocard(data: {
-  id: 1;
+  id: number;
   name: string;
   role: string;
   description: string;

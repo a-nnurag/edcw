@@ -11,7 +11,12 @@ const Events = () => {
         {data.map((item, index) => {
           return (
             <div className={styles.eventcontianer} key={index}>
-              <Eventcontainer data={item} />
+              <Eventcontainer
+                id={item.id}
+                src={item.src}
+                title={item.title}
+                descritption={item.descritption}
+              />
             </div>
           );
         })}
