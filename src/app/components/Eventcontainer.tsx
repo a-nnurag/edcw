@@ -19,7 +19,7 @@ const Eventcontainer = (data: {
       />
       <div className={styles.card__inner}>
         <h2 className={styles.card__inner_h2}>{data.title}</h2>
-        <p className={styles.card__inner_p}>{data.descritption}</p>
+        <div className={styles.card__inner_p}>{data.descritption}</div>
       </div>
     </div>
   );

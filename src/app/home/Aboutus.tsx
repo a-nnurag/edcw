@@ -17,7 +17,7 @@ const AboutUs = () => {
         />
         <div className={styles.content}>
           <div className={styles.topic}>What is EDC?</div>
-          <p className={styles.para}>
+          <div className={styles.para}>
             The Entrepreneurship Development Cell (EDC) at IIEST, Shibpur, is
             dedicated to instilling an entrepreneurial mindset in its students
             and fostering their innovative spirit. Our primary goal is to
@@ -27,7 +27,7 @@ const AboutUs = () => {
             securing seed funding, and linking aspiring entrepreneurs with angel
             investors, all with the ultimate aim of transforming novel concepts
             into thriving startups.
-          </p>
+          </div>
         </div>
       </div>
     </div>

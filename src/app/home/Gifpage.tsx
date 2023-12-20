@@ -6,12 +6,7 @@ import Link from "next/link";
 const Gifpage = () => {
   return (
     <div className={styles.body} id="gifpage">
-      <video
-        src="/video.mp4"
-        autoPlay
-        muted
-        className="w-full h-full md:h-1/2"
-      />
+      <video src="/video.mp4" autoPlay muted className={styles.video} />
       <button className={styles.button}>
         <Link
           href="https://dev-il-dev.github.io/edcwebsite/"
